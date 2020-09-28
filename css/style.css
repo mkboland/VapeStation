@@ -19,6 +19,8 @@ body {
   margin-bottom: 15px; }
   .navcolour nav {
     background-color: #1a1c20 !important; }
+    .navcolour nav .hide-admin {
+      display: none; }
     .navcolour nav a {
       color: #cf7500 !important; }
     .navcolour nav a:hover {
@@ -56,6 +58,8 @@ footer {
     color: #cf7500; }
   footer a:hover, footer a:active {
     color: #f0a500; }
+  footer .hide {
+    display: none; }
   footer .row {
     margin: 0px;
     padding: 5px 15px; }
@@ -98,10 +102,51 @@ footer {
       .row .card-deck .card .btn-primary {
         background-color: #cf7500;
         border-color: #cf7500;
-        text-align: left;
+        text-align: right;
         float: right;
         color: #1a1c20;
         font-weight: 500; }
       .row .card-deck .card .btn-primary:hover {
         background-color: #f0a500 !important;
         border-color: #f0a500 !important; }
+
+.login {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px; }
+  .login .form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto; }
+  .login .form-signin .checkbox {
+    font-weight: 400; }
+  .login .form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px; }
+  .login .form-signin .form-control:focus {
+    z-index: 2; }
+  .login .form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0; }
+  .login .form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0; }
+  .login .btn-primary {
+    background-color: #cf7500;
+    border-color: #cf7500;
+    text-align: center;
+    float: right;
+    color: #1a1c20;
+    font-weight: 500; }
+  .login .btn-primary:hover {
+    background-color: #f0a500 !important;
+    border-color: #f0a500 !important; }

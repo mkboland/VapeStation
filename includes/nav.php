@@ -8,6 +8,9 @@
 
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav mt-2 mt-lg-0  ml-auto text-right">
+          <li class="nav-item <?php if($_SESSION['user_level'] != 1){echo "hide-admin";}?>">
+            <a class="nav-link" href="admin-dashboard.php">Admin Dashboard</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="juices.php" >Juices</a>
           </li>

@@ -7,9 +7,8 @@
         <a href="mailto:michael@michaelboland.co.uk?Subject=Vapes%20Station%20Enquiry" target="_top">Email</a>
 
         <h5>Admin</h5>
-        <a href="login.php">Log In</a>
-        <br>
-        <a href="logout.php">Log Out</a>
+        <a href="login.php" class="<?php if($_SESSION['user_level'] != 0){echo "hide";}?>">Log In</a>
+        <a href="logout.php" class="<?php if($_SESSION['user_level'] != 1){echo "hide";}?>">Log Out</a>
       </div>
 
       <div class="col-sm-3">

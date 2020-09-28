@@ -13,10 +13,10 @@ include "includes/head.php"
    <?php include "includes/nav.php" ?>
 
      <div class="container">
-       <body class="text-center login">
+       <div class="text-center login">
         <form class="form-signin" method="post">
-          <h1 class="h3 mb-3 font-weight-normal">Welcome to Project Data Tracker</h1>
-          <h2 class="h3 mb-3 font-weight-normal">Please sign in</h2>
+          <h1 class="h3 mb-3 font-weight-normal">Admin Dashboard</h1>
+          <h2 class="h3 mb-3 font-weight-normal">Sign in</h2>
 
           <label for="email" class="sr-only">Email address</label>
           <input type="email" id="username" name="username" class="form-control" placeholder="Email address" required="" autofocus="" autocomplete="on" >
@@ -30,5 +30,6 @@ include "includes/head.php"
 
         </form>
      </div>
+   </div>
 
    <?php include "includes/footer.php" ?>

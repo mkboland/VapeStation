@@ -1,4 +1,7 @@
- <?php include "includes/head.php" ?> <!-- Calls the header -->
+ <?php
+ include "includes/session.php";
+ include "includes/head.php"; 
+ ?> <!-- Calls the header -->
 
   <head>
     <title>Vape Station - Juices</title>

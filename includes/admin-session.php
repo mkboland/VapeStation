@@ -21,7 +21,7 @@ $_SESSION['user_name'] = $row['username'];
 // }
 
 if($_SESSION['user_level'] != 1){
-  header("location:welcome.php");
+  header("location:index.php");
   die();
 }
 

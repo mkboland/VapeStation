@@ -6,10 +6,23 @@ $off-white: #f4f4f4;
 body{
   background-color: $off-white;
   color: $black;
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 254px;
+  @media only screen and (min-width: 280px) {
+    padding-bottom: 388px;
+  }
+  @media only screen and (min-width: 576px) {
+    padding-bottom: 364px;
+  }
+  @media only screen and (min-width: 767px) {
+    padding-bottom: 284px;
+  }
 }
 .navcolour{
   background-color: $black;
   font-weight: 600;
+  margin-bottom: 15px;
   nav{
     background-color: $black !important;
     a{
@@ -88,6 +101,43 @@ footer{
     }
     .remove{
       display: none !important;
+    }
+  }
+}
+
+.row{
+  margin-left: 0px;
+  margin-right: 0px;
+  justify-content: center;
+  .card-deck{
+    margin-left: 0px;
+    margin-right: 0px;
+    justify-content: space-between;
+    a{
+      color: inherit;
+      text-decoration: none;
+    }
+    .card{
+      margin-left: 15px;
+      margin-right: 15px;
+      min-width: 270px;
+      max-width: 270px;
+      @media only screen and (max-width: 767px) {
+        margin-left: 0px;
+        margin-right: 0px;
+      }
+      .btn-primary{
+        background-color: $dark-orange;
+        border-color: $dark-orange;
+        text-align: left;
+        float: right;
+        color: $black;
+        font-weight: 500;
+      }
+      .btn-primary:hover{
+        background-color: $bright-orange !important;
+        border-color: $bright-orange !important;
+      }
     }
   }
 }

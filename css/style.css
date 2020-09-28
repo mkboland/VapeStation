@@ -159,9 +159,9 @@ footer {
     min-width: 100%;
     display: flex; }
     .row .project .btn-dark {
-      background-color: #cf7500;
-      border-color: #cf7500;
-      color: #1a1c20; }
+      background-color: #1a1c20;
+      border-color: #1a1c20;
+      color: #f4f4f4; }
     .row .project .btn-dark:hover {
       background-color: #f0a500 !important;
       border-color: #f0a500 !important; }
@@ -177,3 +177,22 @@ footer {
       @media only screen and (max-width: 280px) {
         .row .project .box {
           font-size: small; } }
+.contact {
+  margin-bottom: 28px; }
+  .contact .btn-submit {
+    float: right;
+    border-color: #cf7500;
+    background-color: #cf7500;
+    color: #f4f4f4; }
+  .contact .btn-submit:hover {
+    border-color: #f0a500;
+    background-color: #f0a500; }
+  .contact .btn-submit:active {
+    border-color: #f0a500;
+    background-color: #f0a500; }
+  .contact .btn-submit:focus {
+    border-color: #f0a500;
+    background-color: #f0a500; }
+  .contact .alert {
+    margin-top: 52px;
+    margin-bottom: 0px; }

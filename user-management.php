@@ -69,6 +69,7 @@ include "includes/head.php";
        $sucess = $_SESSION['updated'];
        $deleted = $_SESSION['deleted'];
        $added = $_SESSION['added'];
+       $error = $_SESSION['error'];
 
        if(isset($_SESSION['updated'])){
          echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -96,6 +97,15 @@ include "includes/head.php";
                </button>
              </div>';
          unset($_SESSION['added']);
+       }
+       elseif(isset($_SESSION['error'])) {
+         echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+               '.$error.'
+               <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+               </button>
+             </div>';
+         unset($_SESSION['error']);
        }
        ?>
 

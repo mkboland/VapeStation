@@ -206,9 +206,9 @@ footer{
     min-width: 100%;
     display: flex;
     .btn-dark{
-      background-color: $dark-orange;
-      border-color: $dark-orange;
-      color: $black;
+      background-color: $black;
+      border-color: $black;
+      color: $off-white;
     }
     .btn-dark:hover{
       background-color: $bright-orange !important;
@@ -227,5 +227,31 @@ footer{
         font-size: small;
       }
     }
+  }
+}
+
+.contact{
+  margin-bottom: 28px;
+  .btn-submit{
+    float: right;
+    border-color: $dark-orange;
+    background-color: $dark-orange;
+    color: $off-white;
+  }
+  .btn-submit:hover{
+    border-color: $bright-orange;
+    background-color: $bright-orange;
+  }
+  .btn-submit:active{
+    border-color: $bright-orange;
+    background-color: $bright-orange;
+  }
+  .btn-submit:focus{
+    border-color: $bright-orange;
+    background-color: $bright-orange;
+  }
+  .alert{
+    margin-top: 52px;
+    margin-bottom: 0px
   }
 }

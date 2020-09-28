@@ -18,7 +18,7 @@ if (isset($_POST['save'])) {
   $sql = "UPDATE users SET username = '$username', email = '$email', user_level = '$userlvl' WHERE id = '$id'";
 
   if (mysqli_query($db, $sql)) {
-      header("location: ../users.php");
+      header("location: ../user-management.php");
       $_SESSION['updated'] = 'Successfully updated user';
   } else {
       echo "Error: " . $sql . "<br>" . mysqli_error($db);

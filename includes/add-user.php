@@ -19,7 +19,8 @@ if (isset($_POST['save'])) {
       header("location: ../user-management.php");
       $_SESSION['added'] = 'Successfully added user';
   } else {
-      echo "Error: " . $sql . "<br>" . mysqli_error($db);
+      header("location: ../user-management.php");
+      $_SESSION['error'] = 'Error. User already exists.';
   }
 }
 ?>

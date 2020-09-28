@@ -21,7 +21,7 @@
             <a class="nav-link" href="#" >Gallery</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" >Contact Us</a>
+            <a class="nav-link" href="contact-us.php" >Contact Us</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Basket <i class="fas fa-shopping-basket"></i> 0</a>

@@ -7,9 +7,9 @@
         <a href="mailto:michael@michaelboland.co.uk?Subject=Vapes%20Station%20Enquiry" target="_top">Email</a>
 
         <h5>Admin</h5>
-        <a href="#">Log In</a>
+        <a href="login.php">Log In</a>
         <br>
-        <a href="#">Log Out</a>
+        <a href="logout.php">Log Out</a>
       </div>
 
       <div class="col-sm-3">

@@ -1,0 +1,93 @@
+$black: #1a1c20;
+$dark-orange: #cf7500;
+$bright-orange: #f0a500;
+$off-white: #f4f4f4;
+
+body{
+  background-color: $off-white;
+  color: $black;
+}
+.navcolour{
+  background-color: $black;
+  font-weight: 600;
+  nav{
+    background-color: $black !important;
+    a{
+      color: $dark-orange !important;
+    }
+    a:hover{
+      color: $bright-orange !important;
+    }
+    ul{
+      float: right;
+    }
+    .btn{
+      color: $dark-orange;
+      border-color: $dark-orange;
+    }
+    .btn:hover{
+      color: $black;
+      border-color: $bright-orange;
+      background-color: $bright-orange;
+    }
+    .radius{
+      border-radius: 3px !important;
+    }
+    @media only screen and (max-width: 991px){
+      .hide{
+        display: none;
+        padding: 0;
+        margin: 0;
+      }
+    }
+    @media only screen and (min-width: 991px){
+      .mobsearch{
+        display: none;
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+}
+
+footer{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background: $black;
+  border-radius: 4px 4px 0 0;
+  color: $off-white;
+  margin-top: 15px;
+  a{
+    color: $dark-orange;
+  }
+  a:hover, a:active{
+    color: $bright-orange;
+  }
+  .row{
+    margin: 0px;
+    padding: 5px 15px;
+  }
+  .copyright{
+  text-align: center;
+  }
+  h5{
+    font-weight: 700;
+    margin-top: 16px;
+    margin-bottom: 0;
+  }
+  iframe{
+    width: 50%;
+    height: auto;
+    margin: 10px 0;
+    padding: 0 15px;
+  }
+  @media only screen and (max-width: 756px) {
+    iframe{
+      display: none;
+    }
+    .remove{
+      display: none !important;
+    }
+  }
+}

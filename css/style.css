@@ -1,0 +1,65 @@
+body {
+  background-color: #f4f4f4;
+  color: #1a1c20; }
+
+.navcolour {
+  background-color: #1a1c20;
+  font-weight: 600; }
+  .navcolour nav {
+    background-color: #1a1c20 !important; }
+    .navcolour nav a {
+      color: #cf7500 !important; }
+    .navcolour nav a:hover {
+      color: #f0a500 !important; }
+    .navcolour nav ul {
+      float: right; }
+    .navcolour nav .btn {
+      color: #cf7500;
+      border-color: #cf7500; }
+    .navcolour nav .btn:hover {
+      color: #1a1c20;
+      border-color: #f0a500;
+      background-color: #f0a500; }
+    .navcolour nav .radius {
+      border-radius: 3px !important; }
+    @media only screen and (max-width: 991px) {
+      .navcolour nav .hide {
+        display: none;
+        padding: 0;
+        margin: 0; } }
+    @media only screen and (min-width: 991px) {
+      .navcolour nav .mobsearch {
+        display: none;
+        padding: 0;
+        margin: 0; } }
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background: #1a1c20;
+  border-radius: 4px 4px 0 0;
+  color: #f4f4f4;
+  margin-top: 15px; }
+  footer a {
+    color: #cf7500; }
+  footer a:hover, footer a:active {
+    color: #f0a500; }
+  footer .row {
+    margin: 0px;
+    padding: 5px 15px; }
+  footer .copyright {
+    text-align: center; }
+  footer h5 {
+    font-weight: 700;
+    margin-top: 16px;
+    margin-bottom: 0; }
+  footer iframe {
+    width: 50%;
+    height: auto;
+    margin: 10px 0;
+    padding: 0 15px; }
+  @media only screen and (max-width: 756px) {
+    footer iframe {
+      display: none; }
+    footer .remove {
+      display: none !important; } }

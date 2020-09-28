@@ -20,8 +20,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
   if (mysqli_num_rows($result) > 0) { //checks for multiple rows
     while($row = mysqli_fetch_assoc($result)){ //foreach row fetch the results
       $dbPassword = "$row[password]"; //stores the password as a variable
-      //if(password_verify($inputpassword,$dbPassword)) { //if the inputed password matches the hash
-      if($inputpassword == $dbPassword){
+      if(password_verify($inputpassword,$dbPassword)) { //if the inputed password matches the hash
         $_SESSION['login_user'] = $myusername; //stores session user name
         header("location: admin-dashboard.php"); //redirects to main webpage
       } else {

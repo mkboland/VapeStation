@@ -150,3 +150,30 @@ footer {
   .login .btn-primary:hover {
     background-color: #f0a500 !important;
     border-color: #f0a500 !important; }
+
+.row {
+  margin-bottom: 15px; }
+  .row .hide {
+    display: none; }
+  .row .project {
+    min-width: 100%;
+    display: flex; }
+    .row .project .btn-dark {
+      background-color: #cf7500;
+      border-color: #cf7500;
+      color: #1a1c20; }
+    .row .project .btn-dark:hover {
+      background-color: #f0a500 !important;
+      border-color: #f0a500 !important; }
+    .row .project .box {
+      /* box-sizing: border-box; */
+      border: 2px solid #1a1c20;
+      width: 100%;
+      height: 38px;
+      margin: 0px;
+      padding: .375rem .75rem;
+      flex-grow: 1;
+      border-radius: .25rem; }
+      @media only screen and (max-width: 280px) {
+        .row .project .box {
+          font-size: small; } }

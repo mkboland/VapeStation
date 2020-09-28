@@ -196,3 +196,36 @@ footer{
     border-color: $bright-orange !important;
   }
 }
+
+.row{
+  margin-bottom: 15px;
+  .hide{
+    display: none;
+  }
+  .project{
+    min-width: 100%;
+    display: flex;
+    .btn-dark{
+      background-color: $dark-orange;
+      border-color: $dark-orange;
+      color: $black;
+    }
+    .btn-dark:hover{
+      background-color: $bright-orange !important;
+      border-color: $bright-orange !important;
+    }
+    .box{
+      /* box-sizing: border-box; */
+      border: 2px solid $black;
+      width:100%;
+      height: 38px;
+      margin: 0px;
+      padding: .375rem .75rem;
+      flex-grow: 1;
+      border-radius: .25rem;
+      @media only screen and (max-width: 280px) {
+        font-size: small;
+      }
+    }
+  }
+}

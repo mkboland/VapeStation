@@ -34,6 +34,14 @@ body {
       color: #1a1c20;
       border-color: #f0a500;
       background-color: #f0a500; }
+    .navcolour nav .btn:active {
+      color: #1a1c20 !important;
+      border-color: #f0a500 !important;
+      background-color: #f0a500 !important; }
+    .navcolour nav .btn:focus {
+      color: #1a1c20 !important;
+      border-color: #f0a500 !important;
+      background-color: #f0a500 !important; }
     .navcolour nav .radius {
       border-radius: 3px !important; }
     @media only screen and (max-width: 991px) {
@@ -188,11 +196,30 @@ footer {
     border-color: #f0a500;
     background-color: #f0a500; }
   .contact .btn-submit:active {
-    border-color: #f0a500;
-    background-color: #f0a500; }
+    border-color: #f0a500 !important;
+    background-color: #f0a500 !important; }
   .contact .btn-submit:focus {
-    border-color: #f0a500;
-    background-color: #f0a500; }
+    border-color: #f0a500 !important;
+    background-color: #f0a500 !important; }
   .contact .alert {
     margin-top: 52px;
     margin-bottom: 0px; }
+
+form .btn-primary {
+  float: right;
+  border-color: #cf7500;
+  background-color: #cf7500;
+  color: #f4f4f4;
+  margin-top: 1rem; }
+
+form .btn-primary:hover {
+  border-color: #f0a500;
+  background-color: #f0a500; }
+
+form .btn-primary:active {
+  border-color: #f0a500 !important;
+  background-color: #f0a500 !important; }
+
+form .btn-primary:focus {
+  border-color: #f0a500 !important;
+  background-color: #f0a500 !important; }

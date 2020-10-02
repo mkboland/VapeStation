@@ -46,6 +46,16 @@ body{
       border-color: $bright-orange;
       background-color: $bright-orange;
     }
+    .btn:active{
+      color: $black !important;
+      border-color: $bright-orange !important;
+      background-color: $bright-orange !important;
+    }
+    .btn:focus{
+      color: $black !important;
+      border-color: $bright-orange !important;
+      background-color: $bright-orange !important;
+    }
     .radius{
       border-radius: 3px !important;
     }
@@ -243,15 +253,38 @@ footer{
     background-color: $bright-orange;
   }
   .btn-submit:active{
-    border-color: $bright-orange;
-    background-color: $bright-orange;
+    border-color: $bright-orange !important;
+    background-color: $bright-orange !important;
   }
   .btn-submit:focus{
-    border-color: $bright-orange;
-    background-color: $bright-orange;
+    border-color: $bright-orange !important;
+    background-color: $bright-orange !important;
   }
   .alert{
     margin-top: 52px;
     margin-bottom: 0px
   }
 }
+
+  form{
+
+    .btn-primary{
+        float: right;
+        border-color: $dark-orange;
+        background-color: $dark-orange;
+        color: $off-white;
+        margin-top: 1rem;
+      }
+      .btn-primary:hover{
+        border-color: $bright-orange;
+        background-color: $bright-orange;
+      }
+      .btn-primary:active{
+        border-color: $bright-orange !important;
+        background-color: $bright-orange !important;
+      }
+      .btn-primary:focus{
+        border-color: $bright-orange !important;
+        background-color: $bright-orange !important;
+      }
+    }

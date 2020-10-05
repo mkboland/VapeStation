@@ -21,7 +21,8 @@ if (isset($_POST['save'])) {
       header("location: ../user-management.php");
       $_SESSION['updated'] = 'Successfully updated user';
   } else {
-      echo "Error: " . $sql . "<br>" . mysqli_error($db);
+    header("location: ../user-management.php");
+    $_SESSION['error'] = "Error: ". $sql . "<br>" . mysqli_error($db);
   }
 }
 elseif (isset($_POST['delete'])) {
@@ -33,7 +34,8 @@ elseif (isset($_POST['delete'])) {
       header("location: ../user-management.php");
       $_SESSION['deleted'] = 'Successfully deleted user';
   } else {
-      echo "Error: " . $sql . "<br>" . mysqli_error($db);
+    header("location: ../user-management.php");
+    $_SESSION['error'] = "Error: ". $sql . "<br>" . mysqli_error($db);
   }
 }
 ?>

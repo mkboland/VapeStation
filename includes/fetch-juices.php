@@ -1,5 +1,5 @@
 <?php
-$sql = "SELECT * FROM products WHERE product_category = 'Juices'";
+$sql = "SELECT * FROM products WHERE product_category = 'Juices' ORDER BY product_brand, product_name";
 $result = mysqli_query($db, $sql);
 
 if (mysqli_num_rows($result) > 0) {

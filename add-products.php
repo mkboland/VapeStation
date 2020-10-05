@@ -13,7 +13,7 @@ include "includes/head.php";
    <?php include "includes/nav.php"; ?>
 
    <div class="container">
-    <form action="includes/add-product-submit.php" method="post" enctype="multipart/form-data">
+    <form action="includes/add-product-submit.php" method="post" enctype="multipart/form-data" class="add-products">
 
       <div class="form-row">
         <div class="form-group col-md-6">
@@ -36,8 +36,7 @@ include "includes/head.php";
           <div class="form-group col-md-3">
             <label for="product-category">Product Category</label>
             <select name="product-category" class="form-control">
-              <option selected>Choose...</option>
-              <option>Juices</option>
+              <option selected>Juices</option>
               <option>Mods</option>
             </select>
           </div>

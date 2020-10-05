@@ -10,7 +10,7 @@ body {
   @media only screen and (min-width: 576px) {
     body {
       padding-bottom: 364px; } }
-  @media only screen and (min-width: 767px) {
+  @media only screen and (min-width: 768px) {
     body {
       padding-bottom: 284px; } }
 .navcolour {
@@ -226,3 +226,7 @@ form .btn-primary:focus {
 
 form .alert {
   margin-top: 4rem; }
+
+@media only screen and (max-width: 767px) {
+  .container .add-products {
+    padding-bottom: 45px; } }

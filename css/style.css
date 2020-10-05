@@ -223,3 +223,6 @@ form .btn-primary:active {
 form .btn-primary:focus {
   border-color: #f0a500 !important;
   background-color: #f0a500 !important; }
+
+form .alert {
+  margin-top: 4rem; }

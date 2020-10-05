@@ -1,6 +1,6 @@
 <?php
 include "includes/login-submit.php";
-include "includes/head.php"
+include "includes/head.php";
 ?> <!-- Calls the header -->
 
 
@@ -10,7 +10,7 @@ include "includes/head.php"
 
  <body class="">
 
-   <?php include "includes/nav.php" ?>
+   <?php include "includes/nav.php"; ?>
 
      <div class="container">
        <div class="text-center login">
@@ -32,4 +32,4 @@ include "includes/head.php"
      </div>
    </div>
 
-   <?php include "includes/footer.php" ?>
+   <?php include "includes/footer.php"; ?>

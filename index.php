@@ -9,10 +9,10 @@
 
   <body class="">
 
-    <?php include "includes/nav.php" ?>
+    <?php include "includes/nav.php"; ?>
 
       <div class="container">
         <?php echo $_SESSION['user_level']; ?>
       </div>
 
-    <?php include "includes/footer.php" ?>
+    <?php include "includes/footer.php"; ?>

@@ -9,7 +9,7 @@ include "includes/head.php";
 
  <body class="">
 
-   <?php include "includes/nav.php" ?>
+   <?php include "includes/nav.php"; ?>
 
      <div class="container">
 
@@ -81,4 +81,4 @@ include "includes/head.php";
 
      </div>
 
-   <?php include "includes/footer.php" ?>
+   <?php include "includes/footer.php"; ?>

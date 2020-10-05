@@ -267,7 +267,6 @@ footer{
 }
 
   form{
-
     .btn-primary{
         float: right;
         border-color: $dark-orange;
@@ -286,5 +285,8 @@ footer{
       .btn-primary:focus{
         border-color: $bright-orange !important;
         background-color: $bright-orange !important;
+      }
+      .alert{
+        margin-top: 4rem;
       }
     }

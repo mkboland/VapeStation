@@ -33,9 +33,9 @@
 
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container hide">
-     <form class="form-inline my-2 my-lg-0 ml-auto">
-       <input class="form-control mr-sm-2" type="search" placeholder="Search">
-       <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+     <form class="form-inline my-2 my-lg-0 ml-auto" action="search.php" accept-charset="UTF-8" method="post">
+       <input class="form-control mr-sm-2" type="text" placeholder="Search" name="searchterm" id="search">
+       <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" name="search">Search</button>
      </form>
     </div>
   </nav>
@@ -43,11 +43,11 @@
   <nav class="navbar navbar-expand-lg navbar-dark ">
     <div class="container">
       <div class="col-12 mobsearch">
-        <form action="" accept-charset="UTF-8" method="get">
+        <form action="search.php" accept-charset="UTF-8" method="post">
           <div class="input-group">
-            <input type="text" name="search" id="search" placeholder="Search" class="form-control radius">
+            <input type="text" name="searchterm" id="search" placeholder="Search" class="form-control radius">
             <span class="input-group-btn">
-              <button class="btn btn-outline-dark col- ml-1" type="submit">Search</button>
+            <button class="btn btn-outline-dark col- ml-1" type="submit" name="search">Search</button>
             </span>
           </div>
         </form>

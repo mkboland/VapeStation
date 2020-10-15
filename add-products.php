@@ -5,7 +5,7 @@ include "includes/head.php";
 
 
  <head>
-   <title>Vape Station - Admin Dashboard</title>
+   <title>Vape Station - Add Prodcuts</title>
  </head>
 
  <body class="">

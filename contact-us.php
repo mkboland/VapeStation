@@ -4,7 +4,7 @@ include "includes/head.php";
 ?> <!-- Calls the header -->
 
  <head>
-   <title>Vape Station - Home</title>
+   <title>Vape Station - Contact Us</title>
  </head>
 
  <body class="">

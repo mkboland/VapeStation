@@ -17,7 +17,7 @@
 
                 <div class="modal fade" id="modal'.$row['product_id'].'" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
                   <div class="modal-dialog  modal-dialog-centered" role="document">
-                    <form class="modal-content" action="includes/edit-products-submit.php" method="post">
+                    <form class="modal-content" action="includes/edit-products-submit.php" method="post" enctype="multipart/form-data">
                       <div class="modal-header">
                         <h5 class="modal-title" id="modal'.$row['product_id'].'">Edit Product</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -25,7 +25,7 @@
                         </button>
                       </div>
                       <div class="modal-body">
-                          <div class="form-group">
+                          <div class="form-group"">
                             <label for="product-brand">Brand: '.$row['product_brand'].'</label>
                             <input type="text" class="form-control" name="product-brand" placeholder="Enter New Product Brand" value="'.$row['product_brand'].'">
 
@@ -35,7 +35,7 @@
                             <input type="text" class="form-control" name="product-name" placeholder="Enter New Product Name" value="'.$row['product_name'].'">
 
                             <label for="product-description">Product Description</label>
-                            <textarea type="text" class="form-control" name="product-description" placeholder="'.$row['product_description'].'"></textarea>
+                            <input type="text" class="form-control" name="product-description" placeholder="'.$row['product_description'].'" value="'.$row['product_description'].'"></input>
 
                             <div class="input-group mb-3">
                               <div class="input-group-prepend">
@@ -54,12 +54,14 @@
                           <label for="product-stock">Product Stock Level</label>
                           <input type="number" min="0.00" max="10000.00" step="0.01" class="form-control" name="product-stock" placeholder="'.$row['product_stock'].'" value="'.$row['product_stock'].'">
 
-                        <!--  <div class="input-group is-invalid">
+                          <img class="card-img-top" src="productImages/'.$row['product_image'].'" alt="Product Image">
+
+                          <div class="input-group is-invalid">
                             <div class="custom-file">
                               <input type="file" class="custom-file-input" name="product-image">
                               <label class="custom-file-label" for="product-image">Choose Product Image...</label>
                             </div>
-                          </div> -->
+                          </div>
 
                       </div>
                       <div class="modal-footer">
@@ -77,7 +79,7 @@
     echo '<div class="row">
             <div class="project">
               <div class="box">
-                <span class="name">Username: No User Found</span>
+                <span class="name">No Products Found</span>
               </div>
           </div>
       </div>';

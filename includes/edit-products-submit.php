@@ -14,14 +14,32 @@
       $productStock = mysqli_real_escape_string($db, $_POST['product-stock']);
       $productCategory = mysqli_real_escape_string($db, $_POST['product-category']);
 
-      $sql = "UPDATE products SET product_brand = '$productBrand', product_name = '$productName', product_description = '$productDescription', product_price = '$productPrice', product_stock = '$productStock', product_category = '$productCategory' WHERE product_id = '$productID'";
+      if (empty($_FILES['product-image']['name'])){ //checks to see if the image upload is empty and if it is doesn't update the image
+        $sql = "UPDATE products SET product_brand = '$productBrand', product_name = '$productName', product_description = '$productDescription', product_price = '$productPrice', product_stock = '$productStock', product_category = '$productCategory' WHERE product_id = '$productID'";
 
-      if (mysqli_query($db, $sql)) {
+        if (mysqli_query($db, $sql)) {
+            header("location: ../edit-products.php");
+            $_SESSION['updated'] = 'Successfully updated product';
+        } else {
           header("location: ../edit-products.php");
-          $_SESSION['updated'] = 'Successfully updated product';
-      } else {
-        header("location: ../edit-products.php");
-        $_SESSION['error'] = "Error: ". $sql . "<br>" . mysqli_error($db);
+          $_SESSION['error'] = "Error: ". $sql . "<br>" . mysqli_error($db);
+        }
+      } else { //if the user has decided to update the image, this code handles updaing the database and uploads the image
+        $productImage = mysqli_real_escape_string($db, $_FILES['product-image']['name']);
+
+        $target = "/Users/michaelboland/Documents/Website Development/University/VapeStation/productImages/".basename($productImage);
+
+        $sql = "UPDATE products SET product_brand = '$productBrand', product_name = '$productName', product_description = '$productDescription', product_price = '$productPrice', product_stock = '$productStock', product_image = '$productImage', product_category = '$productCategory' WHERE product_id = '$productID'";
+
+        mysqli_query($db, $sql);
+
+        if (move_uploaded_file($_FILES['product-image']['tmp_name'], $target)) {
+            header("location: ../edit-products.php");
+            $_SESSION['updated'] = 'Successfully updated product';
+        } else {
+          header("location: ../edit-products.php");
+          $_SESSION['error'] = "Error: ". $sql . "<br>" . mysqli_error($db);
+        }
       }
     }
     elseif (isset($_POST['delete'])) {

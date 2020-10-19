@@ -14,7 +14,7 @@ if(isset($_POST['search'])) {
   if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)){
-      echo '<a href="#">
+      echo '<a href="product-page.php?productId='.$row['product_id'].'">
         <div class="card mb-4">
           <img class="card-img-top" src="productImages/'.$row['product_image'].'" alt="Product Image">
           <div class="card-body">

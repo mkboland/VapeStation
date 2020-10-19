@@ -230,3 +230,80 @@ form .alert {
 @media only screen and (max-width: 767px) {
   .container .add-products {
     padding-bottom: 45px; } }
+
+.product-page {
+  display: flex; }
+  @media only screen and (max-width: 500px) {
+    .product-page {
+      flex-wrap: wrap; } }
+  .product-page .image {
+    padding: 0 1rem;
+    max-width: 100%; }
+    @media only screen and (max-width: 500px) {
+      .product-page .image {
+        padding: 10px 1rem; } }
+    @media only screen and (min-width: 500px) {
+      .product-page .image {
+        width: 20rem; } }
+    @media only screen and (min-width: 991px) {
+      .product-page .image {
+        width: 300px;
+        height: auto; } }
+  .product-page .right-align {
+    text-align: left; }
+    .product-page .right-align .price {
+      margin-top: 1rem;
+      font-size: 2rem;
+      font-weight: 400;
+      color: #f0a500; }
+    .product-page .right-align form {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center; }
+      @media only screen and (max-width: 991px) {
+        .product-page .right-align form {
+          margin-top: 1rem; } }
+      .product-page .right-align form .text {
+        font-size: 1.2rem; }
+      .product-page .right-align form .quanity {
+        margin-left: .5rem;
+        padding: .375rem .75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        border-radius: .25rem;
+        border-color: none; }
+        @media only screen and (max-width: 299px) {
+          .product-page .right-align form .quanity {
+            margin-left: 0rem;
+            margin-top: 1rem; } }
+        .product-page .right-align form .quanity .quanity:active {
+          border-color: #f0a500; }
+        .product-page .right-align form .quanity .quanity:hover {
+          border-color: #f0a500; }
+        .product-page .right-align form .quanity .quanity:focus {
+          border-color: #f0a500; }
+      .product-page .right-align form .btn-primary {
+        float: right;
+        border-color: #cf7500;
+        background-color: #cf7500;
+        color: #f4f4f4;
+        margin-top: 1rem;
+        margin-bottom: 1rem; }
+        @media only screen and (min-width: 407px) {
+          .product-page .right-align form .btn-primary {
+            margin-left: .5rem; } }
+        @media only screen and (min-width: 501px) {
+          .product-page .right-align form .btn-primary {
+            margin-left: 0rem; } }
+        @media only screen and (min-width: 768px) {
+          .product-page .right-align form .btn-primary {
+            margin-left: .5rem; } }
+      .product-page .right-align form .btn-primary:hover {
+        border-color: #f0a500;
+        background-color: #f0a500; }
+      .product-page .right-align form .btn-primary:active {
+        border-color: #f0a500 !important;
+        background-color: #f0a500 !important; }
+      .product-page .right-align form .btn-primary:focus {
+        border-color: #f0a500 !important;
+        background-color: #f0a500 !important; }

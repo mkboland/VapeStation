@@ -298,3 +298,97 @@ footer{
         }
       }
     }
+
+  .product-page{
+    display: flex;
+    @media only screen and (max-width: 500px){
+      flex-wrap: wrap;
+    }
+    .image{
+      padding: 0 1rem;
+      max-width: 100%;
+    //  height: 100%;
+      @media only screen and (max-width: 500px){
+        padding: 10px 1rem;
+      }
+      @media only screen and (min-width: 500px){
+        width: 20rem;
+        //height: auto;
+      }
+      @media only screen and (min-width: 991px){
+        width: 300px;
+        height: auto;
+      }
+    }
+    .right-align{
+      text-align: left;
+      .price{
+        margin-top: 1rem;
+        font-size: 2rem;
+        font-weight: 400;
+        color: $bright-orange;
+      }
+      form{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        //justify-content: space-evenly;
+        @media only screen and (max-width: 991px){
+          margin-top: 1rem;
+        }
+        .text{
+          font-size: 1.2rem;
+        }
+        .quanity{
+          margin-left: .5rem;
+          padding: .375rem .75rem;
+          font-size: 1rem;
+          line-height: 1.5;
+          border-radius: .25rem;
+          border-color: none;
+          @media only screen and (max-width: 299px){
+            margin-left: 0rem;
+            margin-top: 1rem;
+          }
+          .quanity:active{
+            border-color: $bright-orange;
+          }
+          .quanity:hover{
+            border-color: $bright-orange;
+          }
+          .quanity:focus{
+            border-color: $bright-orange;
+          }
+        }
+      .btn-primary{
+          float: right;
+          border-color: $dark-orange;
+          background-color: $dark-orange;
+          color: $off-white;
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+          @media only screen and (min-width: 407px){
+            margin-left: .5rem;
+          }
+          @media only screen and (min-width: 501px){
+            margin-left: 0rem;
+          }
+          @media only screen and (min-width: 768px){
+            margin-left: .5rem;
+          }
+        }
+        .btn-primary:hover{
+          border-color: $bright-orange;
+          background-color: $bright-orange;
+        }
+        .btn-primary:active{
+          border-color: $bright-orange !important;
+          background-color: $bright-orange !important;
+        }
+        .btn-primary:focus{
+          border-color: $bright-orange !important;
+          background-color: $bright-orange !important;
+        }
+      }
+    }
+  }

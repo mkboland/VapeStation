@@ -12,10 +12,19 @@ if (mysqli_num_rows($result) > 0) {
       <h2>'.$row['product_brand'].'</h2>
       <h3>'.$row['product_name'].'</h3>
       <span class="price">£'.$row['product_price'].'</span>
-      <form>
+      <form action="includes/cartSession.php" method="post" enctype="multipart/form-data">
         <span class="text">Quanity</span>
-        <input type="number" name="quanity" value="1" class="quanity">
-        <a href="#2" value="'.$row['product_id'].'" class="btn btn-primary">Add To Basket</a>
+
+        <input type="text" style="display:none;" id="product-id" name="product-id" value="'.$row['product_id'].'">
+        <input type="number" name="quanity" id="quanity" value="1" class="quanity">
+        <button type="submit" class="btn btn-primary" name="add" value="add">Add to Basket</button>
+
+        <input type="text" style="display:none" id="product-brand" name="product-brand" value="'.$row['product_brand'].'">
+        <input type="text" style="display:none" id="product-name" name="product-name" value="'.$row['product_name'].'">
+        <input type="text" style="display:none" id="product-price" name="product-price" value="'.$row['product_price'].'">
+        <input type="text" style="display:none" id="product-image" name="product-image" value="'.$row['product_image'].'">
+
+
       </form>
       <h4>Description</h4>
       <p>'.$row['product_description'].'</p>

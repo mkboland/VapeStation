@@ -24,7 +24,7 @@
             <a class="nav-link" href="contact-us.php" >Contact Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Basket <i class="fas fa-shopping-basket"></i> 0</a>
+            <a class="nav-link" href="basket.php">Basket <i class="fas fa-shopping-basket"></i> <?php $basketCount = count($_SESSION['cart']); echo $basketCount; ?></a>
           </li>
         </ul>
       </div>

@@ -29,7 +29,7 @@
                             <label for="product-brand">Brand: '.$row['product_brand'].'</label>
                             <input type="text" class="form-control" name="product-brand" placeholder="Enter New Product Brand" value="'.$row['product_brand'].'">
 
-                            <input type text class="hide" id="product-id" name="product-id" value="'.$row['product_id'].'">
+                            <input type="text" class="hide" id="product-id" name="product-id" value="'.$row['product_id'].'">
 
                             <label for="product-name">Name: '.$row['product_name'].'</label>
                             <input type="text" class="form-control" name="product-name" placeholder="Enter New Product Name" value="'.$row['product_name'].'">

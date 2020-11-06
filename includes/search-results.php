@@ -22,7 +22,19 @@ if(isset($_POST['search'])) {
             <h6 class="card-title">'.$row['product_name'].'</h6>
              <p class="card-text">'.$row['product_description'].'</p>
              <span class="card-text">£'.$row['product_price'].'</span>
-             <a href="#2" value="'.$row['product_id'].'" class="btn btn-primary">Add To Basket</a>
+
+             <form action="includes/cartSession.php" method="post" enctype="multipart/form-data">
+
+               <input type="text" class="hide" id="product-id" name="product-id" value="'.$row['product_id'].'">
+               <input type="text" class="hide" id="product-brand" name="product-brand" value="'.$row['product_brand'].'">
+               <input type="text" class="hide" id="product-name" name="product-name" value="'.$row['product_name'].'">
+               <input type="text" class="hide" id="product-price" name="product-price" value="'.$row['product_price'].'">
+               <input type="text" class="hide" id="product-image" name="product-image" value="'.$row['product_image'].'">
+
+               <button type="submit" class="btn btn-primary" name="add" value="add">Add to Basket</button>
+
+             </form>
+
            </div>
         </div>
       </a>';

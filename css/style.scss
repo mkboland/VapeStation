@@ -10,7 +10,7 @@ body{
   min-height: 100vh;
   padding-bottom: 254px;
   @media only screen and (min-width: 280px) {
-    padding-bottom: 388px;
+    padding-bottom: 475px;
   }
   @media only screen and (min-width: 576px) {
     padding-bottom: 364px;
@@ -389,6 +389,75 @@ footer{
           border-color: $bright-orange !important;
           background-color: $bright-orange !important;
         }
+      }
+    }
+  }
+
+  .basket{
+    width: 100%;
+  //  padding: 0.5rem;
+    border: 1px solid $black;
+    border-radius: .25rem;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+    display: flex;
+    margin-top: 15px;
+    flex-wrap: wrap;
+    img{
+      border-radius: .25rem;
+      max-width: 150px;
+    }
+    .brand{
+      margin-left: 1rem;
+      margin-top: 1rem;
+      flex-direction: column;
+      // align-self: center;
+    }
+    .price{
+      margin-right: 1rem;
+      margin-top: 1rem;
+      margin-left: auto;
+      text-align: right;
+      flex-direction: column;
+      display: flex;
+      }
+      .button{
+        flex-direction: row;
+        margin-top: auto;
+        .btn-danger{
+          padding: .300rem;
+          align-self: flex-end;
+          margin-top: auto;
+          margin-bottom: 1rem;
+        }
+        .btn-success{
+          padding: .300rem;
+          align-self: flex-end;
+          margin-top: auto;
+          margin-bottom: 1rem;
+      }
+    }
+  }
+
+  .total{
+    display: flex;
+    float: right;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    flex-direction: column;
+    text-align: right;
+    .checkoutbutton{
+      .btn-primary{
+        background-color: $dark-orange;
+        border-color: $dark-orange;
+        text-align: center;
+        float: right;
+        color: $black;
+        font-weight: 500;
+        margin-left: .5rem;
+      }
+      .btn-primary:hover{
+        background-color: $bright-orange !important;
+        border-color: $bright-orange !important;
       }
     }
   }

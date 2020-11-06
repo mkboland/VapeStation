@@ -6,7 +6,7 @@ body {
   padding-bottom: 254px; }
   @media only screen and (min-width: 280px) {
     body {
-      padding-bottom: 388px; } }
+      padding-bottom: 475px; } }
   @media only screen and (min-width: 576px) {
     body {
       padding-bottom: 364px; } }
@@ -307,3 +307,58 @@ form .alert {
       .product-page .right-align form .btn-primary:focus {
         border-color: #f0a500 !important;
         background-color: #f0a500 !important; }
+
+.basket {
+  width: 100%;
+  border: 1px solid #1a1c20;
+  border-radius: .25rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  display: flex;
+  margin-top: 15px;
+  flex-wrap: wrap; }
+  .basket img {
+    border-radius: .25rem;
+    max-width: 150px; }
+  .basket .brand {
+    margin-left: 1rem;
+    margin-top: 1rem;
+    flex-direction: column; }
+  .basket .price {
+    margin-right: 1rem;
+    margin-top: 1rem;
+    margin-left: auto;
+    text-align: right;
+    flex-direction: column;
+    display: flex; }
+  .basket .button {
+    flex-direction: row;
+    margin-top: auto; }
+    .basket .button .btn-danger {
+      padding: .300rem;
+      align-self: flex-end;
+      margin-top: auto;
+      margin-bottom: 1rem; }
+    .basket .button .btn-success {
+      padding: .300rem;
+      align-self: flex-end;
+      margin-top: auto;
+      margin-bottom: 1rem; }
+
+.total {
+  display: flex;
+  float: right;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  flex-direction: column;
+  text-align: right; }
+  .total .checkoutbutton .btn-primary {
+    background-color: #cf7500;
+    border-color: #cf7500;
+    text-align: center;
+    float: right;
+    color: #1a1c20;
+    font-weight: 500;
+    margin-left: .5rem; }
+  .total .checkoutbutton .btn-primary:hover {
+    background-color: #f0a500 !important;
+    border-color: #f0a500 !important; }

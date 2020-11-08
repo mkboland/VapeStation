@@ -3,16 +3,8 @@ body {
   color: #1a1c20;
   position: relative;
   min-height: 100vh;
-  padding-bottom: 254px; }
-  @media only screen and (min-width: 280px) {
-    body {
-      padding-bottom: 475px; } }
-  @media only screen and (min-width: 576px) {
-    body {
-      padding-bottom: 364px; } }
-  @media only screen and (min-width: 768px) {
-    body {
-      padding-bottom: 284px; } }
+  padding-bottom: 190px; }
+
 .navcolour {
   background-color: #1a1c20;
   font-weight: 600;
@@ -87,6 +79,10 @@ footer {
       display: none; }
     footer .remove {
       display: none !important; } }
+.container {
+  padding-bottom: inherit;
+  overflow: hidden; }
+
 .row {
   margin-left: 0px;
   margin-right: 0px;
@@ -351,14 +347,32 @@ form .alert {
   padding-top: 1rem;
   flex-direction: column;
   text-align: right; }
-  .total .checkoutbutton .btn-primary {
-    background-color: #cf7500;
-    border-color: #cf7500;
+  .total .checkoutbutton {
+    width: 230px;
+    height: 35px;
+    margin-bottom: .5rem; }
+    .total .checkoutbutton .btn-primary {
+      background-color: #cf7500;
+      border-color: #cf7500;
+      text-align: center;
+      float: right;
+      color: #1a1c20;
+      font-weight: 500;
+      margin-left: .5rem; }
+    .total .checkoutbutton .btn-primary:hover {
+      background-color: #f0a500 !important;
+      border-color: #f0a500 !important; }
+    .total .checkoutbutton .btn-danger {
+      width: 230px;
+      height: 35px; }
+
+.thankyou {
+  max-width: 600px; }
+  .thankyou h2 {
     text-align: center;
-    float: right;
-    color: #1a1c20;
-    font-weight: 500;
-    margin-left: .5rem; }
-  .total .checkoutbutton .btn-primary:hover {
-    background-color: #f0a500 !important;
-    border-color: #f0a500 !important; }
+    margin-bottom: 1.5rem; }
+  .thankyou p {
+    margin-bottom: .5rem; }
+    .thankyou p span {
+      font-weight: bold;
+      color: #cf7500; }

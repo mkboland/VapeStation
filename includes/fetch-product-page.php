@@ -22,6 +22,7 @@ if (mysqli_num_rows($result) > 0) {
         <input type="text" style="display:none" id="product-brand" name="product-brand" value="'.$row['product_brand'].'">
         <input type="text" style="display:none" id="product-name" name="product-name" value="'.$row['product_name'].'">
         <input type="text" style="display:none" id="product-price" name="product-price" value="'.$row['product_price'].'">
+        <input type="text" style="display:none" id="original-price" name="original-price" value="'.$row['product_price'].'">
         <input type="text" style="display:none" id="product-image" name="product-image" value="'.$row['product_image'].'">
 
 

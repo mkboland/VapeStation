@@ -20,6 +20,7 @@ if (mysqli_num_rows($result) > 0) {
              <input type="text" class="hide" id="product-brand" name="product-brand" value="'.$row['product_brand'].'">
              <input type="text" class="hide" id="product-name" name="product-name" value="'.$row['product_name'].'">
              <input type="text" class="hide" id="product-price" name="product-price" value="'.$row['product_price'].'">
+             <input type="text" class="hide" id="original-price" name="original-price" value="'.$row['product_price'].'">
              <input type="text" class="hide" id="product-image" name="product-image" value="'.$row['product_image'].'">
 
              <button type="submit" class="btn btn-primary" name="add" value="add">Add to Basket</button>

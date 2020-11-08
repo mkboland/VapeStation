@@ -10,6 +10,7 @@ error_reporting(E_ALL); //error reporting
     $productBrand = mysqli_real_escape_string($db, $_POST['product-brand']);
     $productName = mysqli_real_escape_string($db, $_POST['product-name']);
     $productPrice = mysqli_real_escape_string($db, $_POST['product-price']);
+    $originalPrice = mysqli_real_escape_string($db, $_POST['original-price']);
     $productImage = mysqli_real_escape_string($db, $_POST['product-image']);
 
     if (isset($db,$_POST['quanity'])) {
@@ -24,14 +25,14 @@ error_reporting(E_ALL); //error reporting
       $arrayQuanity = $_SESSION['cart'][$key]['quanity'];
 
       $quanity = $quanity + $arrayQuanity;
-      $productPrice = $productPrice * $quanity;
+      $productPrice = $originalPrice * $quanity;
 
       $_SESSION['cart'][$key]['quanity'] = $quanity;
       $_SESSION['cart'][$key]['product-price'] = $productPrice;
 
       header("location:../basket.php"); //redirects to main webpage
     } else {
-      $_SESSION['cart'][] = array('product-id' => $productID, 'product-brand' => $productBrand, 'product-name' => $productName, 'product-price' => $productPrice, 'quanity' => $quanity, 'product-image' => $productImage);
+      $_SESSION['cart'][] = array('product-id' => $productID, 'product-brand' => $productBrand, 'product-name' => $productName, 'product-price' => $productPrice, 'original-price' => $originalPrice, 'quanity' => $quanity, 'product-image' => $productImage);
 
       header("location:../basket.php"); //redirects to main webpage
     }

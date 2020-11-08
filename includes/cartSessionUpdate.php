@@ -7,13 +7,13 @@ error_reporting(E_ALL); //error reporting
 
   if (isset($_POST['update'])) {
     $productID = mysqli_real_escape_string($db, $_POST['product-id']);
-    $productPrice = mysqli_real_escape_string($db,$_POST['product-price']); //strips slashes from the form
+    $originalPrice = mysqli_real_escape_string($db, $_POST['original-price']);
     $quanity = mysqli_real_escape_string($db,$_POST['quanity']); //strips slashes from the form
 
     $key = array_search($productID, array_column($_SESSION['cart'], 'product-id'));
 
     if (array_key_exists($key, $_SESSION['cart'])) {
-      $productPrice = $productPrice * $quanity;
+      $productPrice = $originalPrice * $quanity;
 
       $_SESSION['cart'][$key]['quanity'] = $quanity;
       $_SESSION['cart'][$key]['product-price'] = $productPrice;

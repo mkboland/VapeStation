@@ -8,16 +8,17 @@ body{
   color: $black;
   position: relative;
   min-height: 100vh;
-  padding-bottom: 254px;
-  @media only screen and (min-width: 280px) {
-    padding-bottom: 475px;
-  }
-  @media only screen and (min-width: 576px) {
-    padding-bottom: 364px;
-  }
-  @media only screen and (min-width: 768px) {
-    padding-bottom: 284px;
-  }
+  padding-bottom: 190px;
+  // padding-bottom: 254px;
+  // @media only screen and (min-width: 280px) {
+  //   padding-bottom: 475px;
+  // }
+  // @media only screen and (min-width: 576px) {
+  //   padding-bottom: 364px;
+  // }
+  // @media only screen and (min-width: 768px) {
+  //   padding-bottom: 284px;
+  // }
 }
 .navcolour{
   background-color: $black;
@@ -119,6 +120,11 @@ footer{
       display: none !important;
     }
   }
+}
+
+.container{
+  padding-bottom: inherit;
+  overflow: hidden;
 }
 
 .row{
@@ -446,6 +452,9 @@ footer{
     flex-direction: column;
     text-align: right;
     .checkoutbutton{
+      width: 230px;
+      height: 35px;
+      margin-bottom: .5rem;
       .btn-primary{
         background-color: $dark-orange;
         border-color: $dark-orange;
@@ -458,6 +467,25 @@ footer{
       .btn-primary:hover{
         background-color: $bright-orange !important;
         border-color: $bright-orange !important;
+      }
+      .btn-danger{
+        width: 230px;
+        height: 35px;
+      }
+    }
+  }
+
+  .thankyou{
+    max-width: 600px;
+    h2{
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    p{
+      margin-bottom: .5rem;
+      span{
+        font-weight: bold;
+        color: $dark-orange;
       }
     }
   }

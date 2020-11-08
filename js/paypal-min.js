@@ -1,0 +1,1 @@
+paypal.Buttons({createOrder:function(e,r){return r.order.create({purchase_units:[{amount:{value:"<?php echo $arrTotal; ?>"}}]})},onApprove:function(e,r){return r.order.capture().then((function(e){window.location.href="includes/orderConfirm.php?name="+e.payer.name.given_name+"&email="+e.payer.email_address}))}}).render("#paypal-button-container");

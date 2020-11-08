@@ -32,7 +32,7 @@ include "includes/head.php";
          return actions.order.capture().then(function(details) {
            // This function shows a transaction success message to your buyer.
            if (details.error === 'INSTRUMENT_DECLINED') {
-             return actions.restart();
+             return actions.restart(); //if card is declined
           }else {
             window.location.href = "includes/orderConfirm.php?name=" + details.payer.name.given_name + "&email=" + details.payer.email_address + "&id=" + details.id;
           }

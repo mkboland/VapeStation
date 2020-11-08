@@ -31,7 +31,11 @@ include "includes/head.php";
          // This function captures the funds from the transaction.
          return actions.order.capture().then(function(details) {
            // This function shows a transaction success message to your buyer.
-           window.location.href = "includes/orderConfirm.php?name=" + details.payer.name.given_name + "&email=" + details.payer.email_address + "&id=" + details.id;
+           if (details.error === 'INSTRUMENT_DECLINED') {
+             return actions.restart();
+          }else {
+            window.location.href = "includes/orderConfirm.php?name=" + details.payer.name.given_name + "&email=" + details.payer.email_address + "&id=" + details.id;
+          }
          });
        },
        onCancel: function (data) {

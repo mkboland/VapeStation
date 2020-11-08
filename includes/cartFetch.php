@@ -1,4 +1,5 @@
 <?php
+setlocale(LC_MONETARY, 'en_GB');
 //$productID = array_column($_SESSION['cart'], 'product-id'); //takes all the product id and makes them a single array from multi
 //$quanity = array_column($_SESSION['cart'], 'quanity'); // takes all the quanity and makes them a single array
 $total = array_column($_SESSION['cart'], 'product-price');
@@ -20,7 +21,7 @@ $arrTotal = array_sum($total);
 
             <div class="price">
               <form action="includes/cartSessionUpdate.php" method="post" enctype="multipart/form-data">
-                <h5>£'.$product['product-price'].'</h5>
+                <h5>'.money_format('%n', $product['product-price']).'</h5>
                 <h6>Quanity: <span><input type="number" id="quanity" name="quanity" value="'.$product['quanity'].'"></input></span></h6>
                 <!-- <h6>Quanity: '.$product['quanity'].'</h6> -->
 
@@ -39,7 +40,7 @@ $arrTotal = array_sum($total);
     }
 
     echo '<div class="total">
-      <h5>Total: £'.$arrTotal.'</h5>
+      <h5>Total: '.money_format('%n', $arrTotal).'</h5>
       <div class="checkoutbutton">
         <a href="includes/cartSessionDestroy.php"><button type="submit" class="btn btn-danger" name="empty" value="Empty Basket">Empty Basket</button></a>
         <!--  <a href="checkout.php"><button type="submit" class="btn btn-primary" name="checkout" value="Checkout">Checkout</button></a> --!>

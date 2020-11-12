@@ -13,7 +13,21 @@ include "includes/head.php";
 
      <div class="container">
        <?php include "includes/cartFetch.php"; ?>
-     </div>
+
+       <?php
+         $error = $_SESSION['error'];
+
+         if(isset($_SESSION['error'])) {
+           echo '<div class="alert alert-danger alert-dismissible fade show basketAlert" role="alert">
+                 '.$error.'
+                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                   <span aria-hidden="true">&times;</span>
+                 </button>
+               </div>';
+           unset($_SESSION['error']);
+         }
+       ?>
+    </div>
 
      <script>
       paypal.Buttons({

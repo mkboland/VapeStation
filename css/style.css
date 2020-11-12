@@ -366,6 +366,10 @@ form .alert {
       width: 230px;
       height: 35px; }
 
+.basketAlert {
+  display: inline-flex;
+  margin-top: .5rem; }
+
 .thankyou {
   max-width: 600px; }
   .thankyou h2 {

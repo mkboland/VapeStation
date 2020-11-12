@@ -1,4 +1,4 @@
 
 includes/config.php
-
-includes/config.php
+includes/configLocal.php
+includes/configLive.php

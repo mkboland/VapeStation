@@ -17,6 +17,8 @@ if (isset($_POST['submit'])) {
   $subject = "Vape Station Enquiry";
 
   $msg = "
+  Thank you for contacting us.\n
+  We have recevied the following information:\n
   First Name: $firstName\n
   Last Name: $lastName\n
   Email: $email\n

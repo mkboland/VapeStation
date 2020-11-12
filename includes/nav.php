@@ -17,9 +17,9 @@
           <li class="nav-item">
             <a class="nav-link" href="mods.php" >Mods</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="#" >Gallery</a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link" href="contact-us.php" >Contact Us</a>
           </li>

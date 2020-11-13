@@ -11,10 +11,12 @@
   $_SESSION['paymentID'] = $_GET['id'];
 
   $to = $_SESSION['paymentEmail'];
+  $name = $_SESSION['paymentName'];
+  $payment = $_SESSION['paymentID'];
   $subject = "Vape Station Order Confirmation";
 
   $msg = '
-  <!DOCTYPE html>
+  <!doctype html>
   <html lang="en" dir="ltr">
     <head>
       <meta charset="utf-8">
@@ -22,19 +24,19 @@
     </head>
     <body style="padding:0; margin: 0 25%; height: 100vh; position: relative">
 
-      <div style="width: 100%; height: 200px; background: #1a1c20;">
+      <div style="width: 100%; height: 200px; background: #1d1d1d;">
         <h1 style="margin: 0; padding: 75px; text-align: center; color: #cf7500">VapeStation</h1>
       </div>
 
       <div style="text-align: center">
-        <h2 style="color: #cf7500">Thank you <?php echo $_SESSION['paymentName']?></h2>
+        <h2 style="color: #cf7500">Thank you '.$name.'</h2>
 
-        <p>Your Order: <span style="font-weight: bold; color: #cf7500;"><?php echo $_SESSION['paymentID']?></span> will be with you within 5 working days.</p>
+        <p>Your Order: <span style="font-weight: bold; color: #cf7500;">'.$payment.'</span> will be with you within 5 working days.</p>
         <p>Best Regards</p>
         <p style="font-weight: bold; color: #cf7500;">VapeStation</p>
       </div>
 
-      <div style="width: 100%; height: 200px; background: #1a1c20; position: absolute; bottom: 0;">
+      <div style="width: 100%; height: 200px; background: #1d1d1d; position: absolute; bottom: 0;">
         <h1 style="margin: 0; padding: 75px; text-align: center; color: #cf7500">VapeStation</h1>
       </div>
 
@@ -42,7 +44,7 @@
   </html>
   ';
 
-  $headers = "From: info@vapestation.co.uk\r\nReply-To: info@vapestation.co.uk";
+  $headers = "From: info@vapestation.co.uk\r\nReply-To: info@vapestation.co.uk\r\nContent-type: text/html";
 
   if(isset($_SESSION['paymentName']) && isset($_SESSION['paymentEmail']) && isset($_SESSION['paymentID']) ) {
     foreach ($update as $productIDupdate => $quanityupdate) {

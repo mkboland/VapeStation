@@ -1,5 +1,5 @@
 <?php
-setlocale(LC_MONETARY, 'en_GB');
+// setlocale(LC_MONETARY, 'en_GB');
 //$productID = array_column($_SESSION['cart'], 'product-id'); //takes all the product id and makes them a single array from multi
 //$quanity = array_column($_SESSION['cart'], 'quanity'); // takes all the quanity and makes them a single array
 $total = array_column($_SESSION['cart'], 'product-price');

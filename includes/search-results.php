@@ -1,7 +1,7 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
 
 if(isset($_POST['search'])) {
   $searchterm = mysqli_real_escape_string($db,$_POST['searchterm']); //strips slashes from the form

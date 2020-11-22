@@ -33,7 +33,7 @@
                             <label for="email">Email: '.$row['email'].'</label>
                             <input type="email" class="form-control" id="email" name="email" placeholder="Enter New Email" value="'.$row['email'].'">
 
-                            <div class="input-group mb-3">
+                            <div class="input-group mb-3 hide">
                               <div class="input-group-prepend">
                                 <label class="input-group-text" for="userlvl">User Level</label>
                               </div>

@@ -380,3 +380,32 @@ form .alert {
     .thankyou p span {
       font-weight: bold;
       color: #cf7500; }
+
+.container .ordersearch .btn {
+  color: #f4f4f4;
+  border-color: #cf7500;
+  background: #cf7500; }
+
+.container .ordersearch .btn:hover {
+  color: #1a1c20;
+  border-color: #f0a500;
+  background-color: #f0a500; }
+
+.container .ordersearch .btn:active {
+  color: #1a1c20 !important;
+  border-color: #f0a500 !important;
+  background-color: #f0a500 !important; }
+
+.container .ordersearch .btn:focus {
+  color: #1a1c20 !important;
+  border-color: #f0a500 !important;
+  background-color: #f0a500 !important; }
+
+.container .searchterm {
+  display: flex;
+  min-width: 100%;
+  justify-content: flex-end;
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
+  .container .searchterm p {
+    flex: auto; }

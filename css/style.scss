@@ -494,3 +494,38 @@ footer{
       }
     }
   }
+
+  .container{
+    .ordersearch{
+      .btn{
+        color: $off-white;
+        border-color: $dark-orange;
+        background: $dark-orange;
+      }
+      .btn:hover{
+        color: $black;
+        border-color: $bright-orange;
+        background-color: $bright-orange;
+      }
+      .btn:active{
+        color: $black !important;
+        border-color: $bright-orange !important;
+        background-color: $bright-orange !important;
+      }
+      .btn:focus{
+        color: $black !important;
+        border-color: $bright-orange !important;
+        background-color: $bright-orange !important;
+      }
+    }
+    .searchterm{
+      display: flex;
+      min-width: 100%;
+      justify-content: flex-end;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      p{
+        flex: auto;
+      }
+    }
+  }

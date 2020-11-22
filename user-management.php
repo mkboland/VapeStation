@@ -44,7 +44,7 @@ include "includes/head.php";
                          <label for="password">Password</label>
                          <input type="password" class="form-control" id="password" name="password" placeholder="Enter New Password" required>
 
-                         <div class="input-group mb-3">
+                         <div class="input-group mb-3 hide">
                            <div class="input-group-prepend">
                              <label class="input-group-text" for="userlvl">User Level</label>
                            </div>

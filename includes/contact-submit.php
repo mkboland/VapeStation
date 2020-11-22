@@ -16,16 +16,6 @@ if (isset($_POST['submit'])) {
   $to = $email;
   $subject = "Vape Station Enquiry";
 
-  $msg = "
-  Thank you for contacting us.\n
-  We have recevied the following information:\n
-  First Name: $firstName\n
-  Last Name: $lastName\n
-  Email: $email\n
-  Telephone: $phone\n
-  Message: $message
-  ";
-
   $msg = '
   <!doctype html>
   <html lang="en" dir="ltr">
@@ -33,7 +23,7 @@ if (isset($_POST['submit'])) {
       <meta charset="utf-8">
       <title>VapeStation Order Confirmation</title>
     </head>
-    <body style="padding:0; margin: 0 25%; height: 100vh; position: relative">
+    <body style="padding:0; margin: 0 5%; height: 100vh; position: relative; background-colour: white !important; color: black !important;">
 
       <div style="width: 100%; height: 200px; background: #1d1d1d;">
         <h1 style="margin: 0; padding: 75px; text-align: center; color: #cf7500">VapeStation</h1>
@@ -56,7 +46,7 @@ if (isset($_POST['submit'])) {
   </html>
   ';
 
-  $headers = "From: info@vapestation.co.uk\r\nReply-To: info@vapestation.co.uk\r\nContent-type: text/html";
+  $headers = "From: info@vapestation.co.uk\r\nBcc: michael@michaelboland.co.uk\r\nReply-To: info@vapestation.co.uk\r\nContent-type: text/html";
 
   mail($to,$subject,$msg,$headers);
 

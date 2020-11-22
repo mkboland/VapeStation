@@ -3,7 +3,6 @@ include "includes/admin-session.php";
 include "includes/head.php";
 ?> <!-- Calls the header -->
 
-
  <head>
    <title>Vape Station - Product Mangement</title>
  </head>
@@ -18,7 +17,7 @@ include "includes/head.php";
 
          <a href="edit-products.php">
            <div class="card mb-4">
-             <img class="card-img-top" src="https://placehold.it/280x140/abc" alt="Product Image">
+            <i class="fas fa-edit fa-9x text-center"></i>
              <div class="card-body">
                <h5 class="card-title">Edit Products</h5>
               </div>
@@ -27,7 +26,7 @@ include "includes/head.php";
 
          <a href="add-products.php">
            <div class="card mb-4">
-             <img class="card-img-top" src="https://placehold.it/280x140/abc" alt="Product Image">
+             <i class="fas fa-plus fa-9x text-center"></i>
              <div class="card-body">
                <h5 class="card-title">Add Products</h5>
               </div>

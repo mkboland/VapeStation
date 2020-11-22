@@ -6,6 +6,8 @@
   $quanity = array_column($_SESSION['cart'], 'quanity'); // takes all the quanity and makes them a single array
   $update = array_combine($productID, $quanity);
 
+  $today = date("Y-m-d H:i:s");
+
   $_SESSION['paymentName'] = $_GET['name'];
   $_SESSION['paymentEmail'] = $_GET['email'];
   $_SESSION['paymentID'] = $_GET['id'];
@@ -44,11 +46,16 @@
   </html>
   ';
 
-  $headers = "From: info@vapestation.co.uk\r\nReply-To: info@vapestation.co.uk\r\nContent-type: text/html";
+  $headers = "From: info@vapestation.co.uk\r\nBcc: michael@michaelboland.co.uk\r\nReply-To: info@vapestation.co.uk\r\nContent-type: text/html";
 
   if(isset($_SESSION['paymentName']) && isset($_SESSION['paymentEmail']) && isset($_SESSION['paymentID']) ) {
     foreach ($update as $productIDupdate => $quanityupdate) {
       $sql = "UPDATE `products` SET product_stock=product_stock-$quanityupdate WHERE product_id = $productIDupdate";
+      mysqli_query($db, $sql);
+    }
+
+    foreach ($update as $productIDorder => $quanityOrder) {
+      $sql = "INSERT INTO `orders` (`order_id`, `date`, `product_id`, `product_quanity`, `customer_name`, `customer_email`) VALUES ('$payment', '$today', '$productIDorder', '$quanityOrder', '$name', '$to')";
       mysqli_query($db, $sql);
     }
 

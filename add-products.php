@@ -3,7 +3,6 @@ include "includes/admin-session.php";
 include "includes/head.php";
 ?> <!-- Calls the header -->
 
-
  <head>
    <title>Vape Station - Add Prodcuts</title>
  </head>

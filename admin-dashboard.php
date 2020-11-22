@@ -18,16 +18,25 @@ include "includes/head.php";
 
          <a href="product-management.php">
            <div class="card mb-4">
-             <img class="card-img-top" src="https://placehold.it/280x140/abc" alt="Product Image">
+             <i class="fas fa-clipboard-list fa-9x text-center"></i>
              <div class="card-body">
                <h5 class="card-title">Product Management</h5>
               </div>
            </div>
          </a>
 
+         <a href="order-management.php">
+           <div class="card mb-4">
+             <i class="fas fa-box-open fa-9x text-center"></i>
+             <div class="card-body">
+               <h5 class="card-title">Order Management</h5>
+              </div>
+           </div>
+         </a>
+
          <a href="user-management.php">
            <div class="card mb-4">
-             <img class="card-img-top" src="https://placehold.it/280x140/abc" alt="Product Image">
+             <i class="card-img-top fas fa-users fa-9x text-center"></i>
              <div class="card-body">
                <h5 class="card-title">User Management</h5>
               </div>

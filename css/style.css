@@ -409,3 +409,17 @@ form .alert {
   margin-bottom: 1rem; }
   .container .searchterm p {
     flex: auto; }
+
+.index .header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; }
+  .index .header .VapeStation {
+    color: #f0a500; }
+
+.index hr {
+  width: 75%;
+  background-color: #f0a500; }
+
+.index h5 {
+  color: #f0a500; }

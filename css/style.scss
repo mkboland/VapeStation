@@ -529,3 +529,21 @@ footer{
       }
     }
   }
+
+  .index{
+    .header{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      .VapeStation{
+        color: $bright-orange;
+      }
+    }
+    hr{
+      width: 75%;
+      background-color: $bright-orange;
+    }
+    h5{
+        color: $bright-orange;
+    }
+  }

@@ -1,5 +1,5 @@
 <?php
-include "includes/login-submit.php" //calls login-submit script;
+include "includes/login-submit.php"; //calls login-submit script
 include "includes/head.php";
 ?> <!-- Calls the header -->
 

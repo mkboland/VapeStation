@@ -2,7 +2,7 @@
 if(isset($_POST['search'])) { //if orders has been searched run this
   $searchterm = mysqli_real_escape_string($db,$_POST['searchterm']); //strips slashes from the form
 
-  $sql = "SELECT * from orders WHERE order_id LIKE '%$searchterm%' OR date LIKE '%$searchterm%' OR product_id LIKE '%$searchterm%' OR customer_name LIKE '%$searchterm%' OR customer_email LIKE '%$searchterm%' ORDER BY date, product_id";
+  $sql = "SELECT * from orders WHERE order_id LIKE '%$searchterm%' OR date LIKE '%$searchterm%' OR product_id LIKE '%$searchterm%' OR customer_name LIKE '%$searchterm%' OR customer_email LIKE '%$searchterm%' ORDER BY date DESC, product_id";
   //search checks for all orders where order id, product id, name or email
 
   $result = mysqli_query($db, $sql);
@@ -17,12 +17,12 @@ if(isset($_POST['search'])) { //if orders has been searched run this
         <td>'.$row[product_quanity].'</td>
         <td>'.$row[customer_name].'</td>
         <td>'.$row[customer_email].'</td>
-      </tr>
-      <div class="searchterm">
-      <p>Search Term: '.$searchterm.'</p>
-      <a href="order-management.php"><button type="button" class="btn btn-danger">Reset</button><a>
-      </div>';
+      </tr>';
     }
+    echo '<div class="searchterm">
+    <p>Search Term: '.$searchterm.'</p>
+    <a href="order-management.php"><button type="button" class="btn btn-danger">Reset</button><a>
+    </div>';
   } else {
     echo '<tr>
       <th scope="row">No Order ID Found</th>
@@ -38,7 +38,7 @@ if(isset($_POST['search'])) { //if orders has been searched run this
     </div>';
   }
 } else { //if no search has been run, display all orders
-  $sql = "SELECT * from orders ORDER BY order_id, product_id";
+  $sql = "SELECT * from orders ORDER BY date DESC, product_id";
   //search checks for all orders
   $result = mysqli_query($db, $sql);
 

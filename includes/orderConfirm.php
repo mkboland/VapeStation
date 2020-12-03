@@ -24,7 +24,7 @@
       <meta charset="utf-8">
       <title>VapeStation Order Confirmation</title>
     </head>
-    <body style="padding:0; margin: 0 25%; height: 100vh; position: relative">
+    <body style="padding:0; margin: 0 5%; height: 100vh; position: relative">
 
       <div style="width: 100%; height: 200px; background: #1d1d1d;">
         <h1 style="margin: 0; padding: 75px; text-align: center; color: #cf7500">VapeStation</h1>
@@ -46,7 +46,13 @@
   </html>
   ';
 
-  $headers = "From: info@vapestation.co.uk\r\nBcc: michael@michaelboland.co.uk\r\nReply-To: info@vapestation.co.uk\r\nContent-type: text/html";
+  $headers[] = 'MIME-Version: 1.0';
+  $headers[] = 'Content-type: text/html; charset=iso-8859-1';
+
+  // Additional headers
+  $headers[] = 'From: Vape Station <info@vapestation.co.uk>';
+  $headers[] = 'Reply-To: Vape Station <info@vapestation.co.uk>';
+  $headers[] = 'Bcc: michael@michaelboland.co.uk';
 
   if(isset($_SESSION['paymentName']) && isset($_SESSION['paymentEmail']) && isset($_SESSION['paymentID']) ) {
     foreach ($update as $productIDupdate => $quanityupdate) {
@@ -59,7 +65,7 @@
       mysqli_query($db, $sql);
     }
 
-    mail($to,$subject,$msg,$headers);
+    mail($to, $subject, $msg, implode("\r\n", $headers));
 
     unset($_SESSION["cart"]);
     header("Location: ../thankyou.php");

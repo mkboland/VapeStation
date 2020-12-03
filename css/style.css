@@ -314,7 +314,8 @@ form .alert {
   flex-wrap: wrap; }
   .basket img {
     border-radius: .25rem;
-    max-width: 150px; }
+    max-width: 150px;
+    max-height: 150px; }
   .basket .brand {
     margin-left: 1rem;
     margin-top: 1rem;

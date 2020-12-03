@@ -46,9 +46,15 @@ if (isset($_POST['submit'])) {
   </html>
   ';
 
-  $headers = "From: info@vapestation.co.uk\r\nBcc: michael@michaelboland.co.uk\r\nReply-To: info@vapestation.co.uk\r\nContent-type: text/html";
+  $headers[] = 'MIME-Version: 1.0';
+  $headers[] = 'Content-type: text/html; charset=iso-8859-1';
 
-  mail($to,$subject,$msg,$headers);
+  // Additional headers
+  $headers[] = 'From: Vape Station <info@vapestation.co.uk>';
+  $headers[] = 'Reply-To: Vape Station <info@vapestation.co.uk>';
+  $headers[] = 'Bcc: michael@michaelboland.co.uk';
+
+  mail($to, $subject, $msg, implode("\r\n", $headers));
 
   header("location: ../contact-us.php");
   $_SESSION['sent'] = 'Message successfully sent';

@@ -14,7 +14,7 @@
     $productCategory = mysqli_real_escape_string($db, $_POST['product-category']);
     $productImage = mysqli_real_escape_string($db, $_FILES['product-image']['name']);
 
-    $target = "/Users/michaelboland/Documents/Website Development/University/VapeStation/productImages/".basename($productImage);
+    $target = "../productImages/".basename($productImage);
 
     $sql = "INSERT INTO products (product_brand, product_name, product_description, product_price, product_stock, product_image, product_category) VALUES ('$productBrand', '$productName', '$productDescription', '$productPrice', '$productStock', '$productImage', '$productCategory')";
 

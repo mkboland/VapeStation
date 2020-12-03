@@ -12,7 +12,7 @@ $arrTotal = array_sum($total);
 
       echo '<div class="basket">
           <p style="display:none">'.$product['product-id'].'</p>
-          <img src="productImages/'.$product['product-image'].'" alt="Product Image"></img>
+          <img src="productImages/'.$product['product-image'].'" alt="Product Image">
 
           <div class="brand">
               <h5>Brand: '.$product['product-brand'].'</h5>

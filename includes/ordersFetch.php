@@ -2,7 +2,7 @@
 if(isset($_POST['search'])) {
   $searchterm = mysqli_real_escape_string($db,$_POST['searchterm']); //strips slashes from the form
 
-  $sql = "SELECT * from orders WHERE order_id LIKE '%$searchterm%' OR date LIKE '%$searchterm%' OR product_id LIKE '%$searchterm%' OR customer_name LIKE '%$searchterm%' OR customer_email LIKE '%$searchterm%' ORDER BY order_id, product_id";
+  $sql = "SELECT * from orders WHERE order_id LIKE '%$searchterm%' OR date LIKE '%$searchterm%' OR product_id LIKE '%$searchterm%' OR customer_name LIKE '%$searchterm%' OR customer_email LIKE '%$searchterm%' ORDER BY date, product_id";
   //search checks for all orders where order id, product id, name or email
 
   $result = mysqli_query($db, $sql);

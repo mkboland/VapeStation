@@ -27,7 +27,7 @@
       } else { //if the user has decided to update the image, this code handles updaing the database and uploads the image
         $productImage = mysqli_real_escape_string($db, $_FILES['product-image']['name']);
 
-        $target = "/Users/michaelboland/Documents/Website Development/University/VapeStation/productImages/".basename($productImage);
+        $target = "../productImages/".basename($productImage);
 
         $sql = "UPDATE products SET product_brand = '$productBrand', product_name = '$productName', product_description = '$productDescription', product_price = '$productPrice', product_stock = '$productStock', product_image = '$productImage', product_category = '$productCategory' WHERE product_id = '$productID'";
 

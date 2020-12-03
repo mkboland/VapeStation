@@ -1,7 +1,7 @@
 <?php
-$productID = $_GET['productId'];
+$productID = $_GET['productId']; //passed from the last page
 
-$sql = "SELECT * FROM products WHERE product_id = '$productID'";
+$sql = "SELECT * FROM products WHERE product_id = '$productID'"; //gets product from db
 $result = mysqli_query($db, $sql);
 
 if (mysqli_num_rows($result) > 0) {

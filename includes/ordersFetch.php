@@ -1,5 +1,5 @@
 <?php
-if(isset($_POST['search'])) {
+if(isset($_POST['search'])) { //if orders has been searched run this
   $searchterm = mysqli_real_escape_string($db,$_POST['searchterm']); //strips slashes from the form
 
   $sql = "SELECT * from orders WHERE order_id LIKE '%$searchterm%' OR date LIKE '%$searchterm%' OR product_id LIKE '%$searchterm%' OR customer_name LIKE '%$searchterm%' OR customer_email LIKE '%$searchterm%' ORDER BY date, product_id";
@@ -37,7 +37,7 @@ if(isset($_POST['search'])) {
     <a href="order-management.php"><button type="button" class="btn btn-danger">Reset</button><a>
     </div>';
   }
-} else {
+} else { //if no search has been run, display all orders
   $sql = "SELECT * from orders ORDER BY order_id, product_id";
   //search checks for all orders
   $result = mysqli_query($db, $sql);

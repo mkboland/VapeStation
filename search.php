@@ -15,7 +15,7 @@
         <div class="row">
           <div class="card-deck">
 
-            <?php include "includes/search-results.php"; ?>
+            <?php include "includes/search-results.php"; //displays search results?>
 
        </div>
      </div>

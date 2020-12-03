@@ -15,7 +15,7 @@
       $productCategory = mysqli_real_escape_string($db, $_POST['product-category']);
 
       if (empty($_FILES['product-image']['name'])){ //checks to see if the image upload is empty and if it is doesn't update the image
-        $sql = "UPDATE products SET product_brand = '$productBrand', product_name = '$productName', product_description = '$productDescription', product_price = '$productPrice', product_stock = '$productStock', product_category = '$productCategory' WHERE product_id = '$productID'";
+        $sql = "UPDATE products SET product_brand = '$productBrand', product_name = '$productName', product_description = '$productDescription', product_price = '$productPrice', product_stock = '$productStock', product_category = '$productCategory' WHERE product_id = '$productID'"; //updates product
 
         if (mysqli_query($db, $sql)) {
             header("location: ../edit-products.php");
@@ -31,9 +31,9 @@
 
         $sql = "UPDATE products SET product_brand = '$productBrand', product_name = '$productName', product_description = '$productDescription', product_price = '$productPrice', product_stock = '$productStock', product_image = '$productImage', product_category = '$productCategory' WHERE product_id = '$productID'";
 
-        mysqli_query($db, $sql);
+        mysqli_query($db, $sql); //excute db code
 
-        if (move_uploaded_file($_FILES['product-image']['tmp_name'], $target)) {
+        if (move_uploaded_file($_FILES['product-image']['tmp_name'], $target)) { //moves images
             header("location: ../edit-products.php");
             $_SESSION['updated'] = 'Successfully updated product';
         } else {
@@ -42,7 +42,7 @@
         }
       }
     }
-    elseif (isset($_POST['delete'])) {
+    elseif (isset($_POST['delete'])) { //delete product from db
       $productID = mysqli_real_escape_string($db, $_POST['product-id']);
 
       $sql = "DELETE FROM products WHERE product_id = '$productID'";

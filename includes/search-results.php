@@ -4,12 +4,12 @@
 // error_reporting(E_ALL);
 
 if(isset($_POST['search'])) {
-  $searchterm = mysqli_real_escape_string($db,$_POST['searchterm']); //strips slashes from the form
+  $searchterm = mysqli_real_escape_string($db,$_POST['searchterm']); //strips slashes from the search term
 
   $sql = "SELECT * from products WHERE product_name LIKE '%$searchterm%' OR product_brand LIKE '%$searchterm%' OR product_description LIKE '%$searchterm%' OR product_category LIKE '%$searchterm%' ORDER BY product_brand, product_name";
   //search checks against name, brand, description, category
 
-  $result = mysqli_query($db, $sql);
+  $result = mysqli_query($db, $sql); //runs query
 
   if (mysqli_num_rows($result) > 0) {
     // output data of each row
@@ -53,39 +53,4 @@ if(isset($_POST['search'])) {
     </a>';
   }
 }
-
-//   $searchterm = mysqli_real_escape_string($db,$_POST['searchterm']);
-//
-//   $sql = "SELECT * FROM products WHERE product_name LIKE '%$searchterm%' ORDER BY product_brand, product_name";
-//   $result = mysqli_query($db, $sql);
-//
-//   if (mysqli_num_rows($result) > 0) {
-//     // output data of each row
-//     while($row = mysqli_fetch_assoc($result)){
-//       echo '<a href="#">
-//         <div class="card mb-4">
-//           <img class="card-img-top" src="productImages/'.$row['product_image'].'" alt="Product Image">
-//           <div class="card-body">
-//             <h5 class="card-title">'.$row['product_brand'].'</h5>
-//             <h6 class="card-title">'.$row['product_name'].'</h6>
-//              <p class="card-text">'.$row['product_description'].'</p>
-//              <span class="card-text">£'.$row['product_price'].'</span>
-//              <a href="#2" value="'.$row['product_id'].'" class="btn btn-primary">Add To Basket</a>
-//            </div>
-//         </div>
-//       </a>';
-//     }
-//   } else {
-//     echo '<a href="#">
-//       <div class="card mb-4">
-//         <img class="card-img-top" src="https://placehold.it/280x140/abc" alt="Product Image">
-//         <div class="card-body">
-//           <h5 class="card-title">No Products Found</h5>
-//            <p class="card-text">No Description Found</p>
-//            <a href="#2" class="btn btn-primary">Add To Basket</a>
-//          </div>
-//       </div>
-//     </a>';
-//   }
-// }
 ?>

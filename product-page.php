@@ -14,7 +14,7 @@
       <div class="container">
         <div class="product-page">
 
-          <?php include "includes/fetch-product-page.php"; ?>
+          <?php include "includes/fetch-product-page.php"; //call product page script, product changes based on info passed?>
 
         </div>
       </div>

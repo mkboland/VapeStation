@@ -12,7 +12,7 @@ include "includes/head.php";
    <?php include "includes/nav.php"; ?>
 
      <div class="container">
-       <?php include 'includes/orderCancelled.php'; ?>
+       <?php include 'includes/orderCancelled.php'; //calls orderCancelled script ?>
      </div>
 
    <?php include "includes/footer.php"; ?>

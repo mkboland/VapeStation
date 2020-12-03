@@ -15,6 +15,7 @@ include "includes/head.php";
 
        <h2 class="text-center">Contact Us</h2>
 
+       <!-- form for contact submit, redirects to contact-submit script -->
        <form enctype="multipart/form-data" action="includes/contact-submit.php" method="post" class="contact">
 
     	  	<div class="form-row">
@@ -75,6 +76,7 @@ include "includes/head.php";
               </div>';
           unset($_SESSION['error']);
         }
+        //if message sent or errors display alert
         ?>
 
 			</form>

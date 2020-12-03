@@ -6,10 +6,10 @@
 include 'config.php';
 session_start(); //starts session
 
-if ($_SESSION['user_level'] != 1) {
-  $_SESSION['user_level'] = 0;
+if ($_SESSION['user_level'] != 1) { //if the session isn't already admin set to user, else set to admin
+  $_SESSION['user_level'] = 0; //user level
 } else {
-  $_SESSION['user_level'] = 1;
+  $_SESSION['user_level'] = 1; //admin level
 }
 
 ?>

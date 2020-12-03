@@ -14,7 +14,7 @@ include "includes/head.php";
 
    <div class="container">
 
-     <?php include "includes/products-fetch.php"; ?>
+     <?php include "includes/products-fetch.php"; //calls products fetch?>
 
      <?php
      $sucess = $_SESSION['updated'];
@@ -48,6 +48,7 @@ include "includes/head.php";
            </div>';
        unset($_SESSION['error']);
      }
+     //alert for sucess, deleted and error depending on outcome of script
      ?>
 
    </div>

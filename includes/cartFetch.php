@@ -1,14 +1,10 @@
 <?php
-// setlocale(LC_MONETARY, 'en_GB');
-//$productID = array_column($_SESSION['cart'], 'product-id'); //takes all the product id and makes them a single array from multi
-//$quanity = array_column($_SESSION['cart'], 'quanity'); // takes all the quanity and makes them a single array
-$total = array_column($_SESSION['cart'], 'product-price');
-$arrTotal = array_sum($total);
-// $sql = "SELECT * FROM products WHERE product_id IN (".implode(',', $productID).")"; //prepares the sql statement
+$total = array_column($_SESSION['cart'], 'product-price'); //gets all prices from the array of the cart
+$arrTotal = array_sum($total); //does array sum
 
   if (!empty($_SESSION['cart'])) { //checks session is set
 
-    foreach($_SESSION['cart'] AS $product){
+    foreach($_SESSION['cart'] AS $product){ //foreach product output like this
 
       echo '<div class="basket">
           <p style="display:none">'.$product['product-id'].'</p>

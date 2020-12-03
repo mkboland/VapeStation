@@ -11,6 +11,7 @@ include "includes/head.php";
 
    <?php include "includes/nav.php"; ?>
 
+   <!-- Order Confirm Page, only accessible once payment has been made -->
      <div class="container thankyou">
        <h2>Thank you <?php echo $_SESSION['paymentName']?></h2>
 
@@ -20,6 +21,6 @@ include "includes/head.php";
 
      </div>
 
-   <?php session_destroy() ?>
+   <?php session_destroy() //destorys all sessions after leaving this page ?>
 
    <?php include "includes/footer.php"; ?>

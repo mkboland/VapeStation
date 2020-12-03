@@ -1,5 +1,5 @@
 <?php
-  $sql = "SELECT * FROM users ORDER BY username";
+  $sql = "SELECT * FROM users ORDER BY username"; //selects all users and orders 
   $result = mysqli_query($db, $sql);
 
   if (mysqli_num_rows($result) > 0) {

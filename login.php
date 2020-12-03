@@ -1,5 +1,5 @@
 <?php
-include "includes/login-submit.php";
+include "includes/login-submit.php" //calls login-submit script;
 include "includes/head.php";
 ?> <!-- Calls the header -->
 
@@ -26,7 +26,7 @@ include "includes/head.php";
 
           <button class="btn btn-lg btn-primary btn-block login-btn" type="submit" value="submit">Sign in</button>
 
-          <p> <?php echo $error; ?></p>
+          <p> <?php echo $error; //echos any error from login-submit?></p>
 
         </form>
      </div>

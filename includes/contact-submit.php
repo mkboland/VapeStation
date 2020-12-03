@@ -7,14 +7,14 @@ include 'session.php';
 
 if (isset($_POST['submit'])) {
 
-  $firstName = strip_tags($_POST['firstName']);
+  $firstName = strip_tags($_POST['firstName']); //all data from form
   $lastName = strip_tags($_POST['lastName']);
   $email = strip_tags($_POST['email']);
   $phone = strip_tags($_POST['phone']);
   $message = strip_tags($_POST['message']);
 
-  $to = $email;
-  $subject = "Vape Station Enquiry";
+  $to = $email; //who it to
+  $subject = "Vape Station Enquiry"; //subject
 
   $msg = '
   <!doctype html>
@@ -44,20 +44,19 @@ if (isset($_POST['submit'])) {
 
     </body>
   </html>
-  ';
+  '; //html message
 
+  //array of headers
   $headers[] = 'MIME-Version: 1.0';
   $headers[] = 'Content-type: text/html; charset=iso-8859-1';
-
-  // Additional headers
   $headers[] = 'From: Vape Station <info@vapestation.co.uk>';
   $headers[] = 'Reply-To: Vape Station <info@vapestation.co.uk>';
   $headers[] = 'Bcc: michael@michaelboland.co.uk';
 
-  mail($to, $subject, $msg, implode("\r\n", $headers));
+  mail($to, $subject, $msg, implode("\r\n", $headers)); //sends email and implodes array of headers
 
-  header("location: ../contact-us.php");
-  $_SESSION['sent'] = 'Message successfully sent';
+  header("location: ../contact-us.php"); //redirect
+  $_SESSION['sent'] = 'Message successfully sent'; //alert success
 
 } else {
   $_SESSION['error'] = 'Unexpect Error. Please try again';

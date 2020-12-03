@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
 
-	<!-- <link rel="shortcut icon" href="images/favicon.ico"/> -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
 
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,7 +19,5 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://www.paypal.com/sdk/js?client-id=Ad79iF4efnEI085a4EI0zWv3aSnSFWnMIG76zpaOBHzLdeNu-pLv4XtmodK-EI8DUkCdKojfxg0HMVt5&currency=GBP"> </script>
-	<!-- <script src="includes/button-toggle-min.js"></script> -->
-	<!-- <script src="includes/clock-min.js"></script> -->
 
 </head>

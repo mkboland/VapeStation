@@ -13,6 +13,7 @@ include "includes/head.php";
 
      <div class="container">
 
+       <!-- searchbar -->
        <form action="order-management.php" class="ordersearch" accept-charset="UTF-8" method="post">
          <div class="input-group">
            <input type="text" name="searchterm" id="search" placeholder="Search" class="form-control radius">
@@ -35,7 +36,7 @@ include "includes/head.php";
             </tr>
           </thead>
           <tbody>
-            <?php include "includes/ordersFetch.php"; ?>
+            <?php include "includes/ordersFetch.php"; //fetches order fetch ?>
           </tbody>
         </table>
       </div>

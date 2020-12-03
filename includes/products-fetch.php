@@ -1,5 +1,5 @@
 <?php
-  $sql = "SELECT * FROM products ORDER BY product_brand, product_name";
+  $sql = "SELECT * FROM products ORDER BY product_brand, product_name"; //gets all products for editing
   $result = mysqli_query($db, $sql);
 
   if (mysqli_num_rows($result) > 0) {
@@ -14,7 +14,7 @@
                   <div class="">
                   <button type="button" class="btn btn-dark toggle" data-toggle="modal" data-target="#modal'.$row['product_id'].'">Edit</button>
                 </div>
-
+                
                 <div class="modal fade" id="modal'.$row['product_id'].'" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
                   <div class="modal-dialog  modal-dialog-centered" role="document">
                     <form class="modal-content" action="includes/edit-products-submit.php" method="post" enctype="multipart/form-data">

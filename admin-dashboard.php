@@ -1,8 +1,7 @@
 <?php
-include "includes/admin-session.php";
-include "includes/head.php";
-?> <!-- Calls the header -->
-
+include "includes/admin-session.php"; //calls admin session
+include "includes/head.php"; //calls the header
+?>
 
  <head>
    <title>Vape Station - Admin Dashboard</title>
@@ -48,4 +47,4 @@ include "includes/head.php";
 </div>
 
 
- <?php include "includes/footer.php"; ?>
+ <?php include "includes/footer.php"; //calls the footer ?>

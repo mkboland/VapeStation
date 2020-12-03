@@ -15,7 +15,7 @@
         <div class="row">
           <div class="card-deck">
 
-            <?php include 'includes/fetch-mods.php'; ?>
+            <?php include 'includes/fetch-mods.php'; //calls fetch mods ?>
 
          </div>
        </div>

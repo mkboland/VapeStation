@@ -15,7 +15,7 @@
         <div class="row">
           <div class="card-deck">
 
-            <?php include "includes/fetch-juices.php"; ?>
+            <?php include "includes/fetch-juices.php"; //calls fetch-juices ?>
 
        </div>
      </div>

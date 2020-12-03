@@ -12,7 +12,7 @@ include "includes/head.php";
    <?php include "includes/nav.php"; ?>
 
      <div class="container">
-
+       <!-- NOT IN USE -->
        <h4 class="mb-3">Billing address</h4>
 
        <form>

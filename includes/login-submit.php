@@ -3,7 +3,7 @@
 // ini_set('display_startup_errors', 1);
 // error_reporting(E_ALL); //error reporting
 
-include 'includes/config.php';
+include 'includes/config.php'; //connects to database
 session_start(); //used for login session
 
 $error = ''; // define variable

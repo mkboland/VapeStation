@@ -107,6 +107,7 @@ include "includes/head.php";
              </div>';
          unset($_SESSION['error']);
        }
+       //alerts displayed for updated, deleted, added and error depending on outcome of script
        ?>
 
      </div>

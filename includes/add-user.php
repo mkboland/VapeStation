@@ -11,16 +11,16 @@ if (isset($_POST['save'])) {
   $inputpassword = mysqli_real_escape_string($db,$_POST['password']); //strips slashes from the form
   $userlvl = mysqli_real_escape_string($db,$_POST['userlvl']); //strips slashes from the form
 
-  $hashedpassword = password_hash($inputpassword, PASSWORD_DEFAULT);
+  $hashedpassword = password_hash($inputpassword, PASSWORD_DEFAULT); //hashes password
 
-  $sql = "INSERT INTO users (id, username, email, password, user_level) VALUES (NULL, '$username', '$email', '$hashedpassword', '$userlvl')";
+  $sql = "INSERT INTO users (id, username, email, password, user_level) VALUES (NULL, '$username', '$email', '$hashedpassword', '$userlvl')"; //insets into database new user
 
-  if (mysqli_query($db, $sql)) {
+  if (mysqli_query($db, $sql)) { //if okay
       header("location: ../user-management.php");
-      $_SESSION['added'] = 'Successfully added user';
+      $_SESSION['added'] = 'Successfully added user'; //alert success
   } else {
-      header("location: ../user-management.php");
-      $_SESSION['error'] = 'Error. User already exists.';
+      header("location: ../user-management.php"); //else there was an error
+      $_SESSION['error'] = 'Error. User already exists.'; //alert on next page
   }
 }
 ?>

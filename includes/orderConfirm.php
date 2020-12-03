@@ -1,21 +1,21 @@
 <?php
   session_start();
-  include "config.php";
+  include "config.php"; //connect to db
 
   $productID = array_column($_SESSION['cart'], 'product-id'); //takes all the product id and makes them a single array from multi
   $quanity = array_column($_SESSION['cart'], 'quanity'); // takes all the quanity and makes them a single array
-  $update = array_combine($productID, $quanity);
+  $update = array_combine($productID, $quanity); //combines the array for updating stock
 
-  $today = date("Y-m-d H:i:s");
+  $today = date("Y-m-d H:i:s"); //todays date and time
 
-  $_SESSION['paymentName'] = $_GET['name'];
+  $_SESSION['paymentName'] = $_GET['name']; //changes the get to sessions
   $_SESSION['paymentEmail'] = $_GET['email'];
   $_SESSION['paymentID'] = $_GET['id'];
 
-  $to = $_SESSION['paymentEmail'];
-  $name = $_SESSION['paymentName'];
-  $payment = $_SESSION['paymentID'];
-  $subject = "Vape Station Order Confirmation";
+  $to = $_SESSION['paymentEmail']; //who confirm is going to
+  $name = $_SESSION['paymentName']; //for the email
+  $payment = $_SESSION['paymentID']; //for the email
+  $subject = "Vape Station Order Confirmation"; //subject of the email
 
   $msg = '
   <!doctype html>
@@ -44,33 +44,33 @@
 
     </body>
   </html>
-  ';
+  '; //html message with inputed data from order
 
+  // array of all headers needed
   $headers[] = 'MIME-Version: 1.0';
   $headers[] = 'Content-type: text/html; charset=iso-8859-1';
-
-  // Additional headers
   $headers[] = 'From: Vape Station <info@vapestation.co.uk>';
   $headers[] = 'Reply-To: Vape Station <info@vapestation.co.uk>';
   $headers[] = 'Bcc: michael@michaelboland.co.uk';
 
-  if(isset($_SESSION['paymentName']) && isset($_SESSION['paymentEmail']) && isset($_SESSION['paymentID']) ) {
-    foreach ($update as $productIDupdate => $quanityupdate) {
+  if(isset($_SESSION['paymentName']) && isset($_SESSION['paymentEmail']) && isset($_SESSION['paymentID']) ) { //if the payment has gone through
+    foreach ($update as $productIDupdate => $quanityupdate) { //for each product and quanity update
       $sql = "UPDATE `products` SET product_stock=product_stock-$quanityupdate WHERE product_id = $productIDupdate";
       mysqli_query($db, $sql);
     }
 
-    foreach ($update as $productIDorder => $quanityOrder) {
+    foreach ($update as $productIDorder => $quanityOrder) { //for each product and quanity place it in orders table
       $sql = "INSERT INTO `orders` (`order_id`, `date`, `product_id`, `product_quanity`, `customer_name`, `customer_email`) VALUES ('$payment', '$today', '$productIDorder', '$quanityOrder', '$name', '$to')";
       mysqli_query($db, $sql);
     }
 
-    mail($to, $subject, $msg, implode("\r\n", $headers));
+    mail($to, $subject, $msg, implode("\r\n", $headers)); //send email
 
-    unset($_SESSION["cart"]);
-    header("Location: ../thankyou.php");
+    unset($_SESSION["cart"]); //unsets the cart so no items in cart
+    header("Location: ../thankyou.php"); //order confirm page
   } else {
-    unset($_SESSION["cart"]);
-    header("Location: ../basket.php");
+    unset($_SESSION["cart"]); //resets cart to try again
+    $_SESSION['error'] = "An unexpected error occured. Please try again";
+    header("Location: ../basket.php"); //error occured alert displayed
   }
 ?>

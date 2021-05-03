@@ -229,21 +229,26 @@ form .alert {
 
 .product-page {
   display: flex; }
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 575px) {
     .product-page {
       flex-wrap: wrap; } }
   .product-page .image {
     padding: 0 1rem;
-    max-width: 100%; }
+    display: block !important;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: auto; }
     @media only screen and (max-width: 500px) {
       .product-page .image {
         padding: 10px 1rem; } }
     @media only screen and (min-width: 500px) {
       .product-page .image {
-        width: 20rem; } }
+        max-width: 20rem;
+        height: auto; } }
     @media only screen and (min-width: 991px) {
       .product-page .image {
-        width: 300px;
+        max-width: 300px;
         height: auto; } }
   .product-page .right-align {
     text-align: left; }

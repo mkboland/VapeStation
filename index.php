@@ -1,7 +1,7 @@
- <?php
- include "includes/session.php"; //calls the session file
- include "includes/head.php"; //calls the head file
- ?>
+<?php
+include "includes/session.php"; //calls the session file
+include "includes/head.php"; //calls the head file
+?>
 
   <head>
     <title>Vape Station - Home</title>
@@ -15,7 +15,7 @@
 
         <div class="header">
           <h1>Welcome to <span class="VapeStation">VapeStation<span></h1>
-          <h6>Vape Juice, Mods and <b>FREE SHIPPING<b></h6>
+          <h6>Vape Juice, Mods and <b>FREE SHIPPING</b></h6>
         </div>
 
         <hr>

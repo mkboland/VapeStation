@@ -11,7 +11,6 @@ if (mysqli_num_rows($result) > 0) {
         <div class="card-body">
           <h5 class="card-title">'.$row['product_brand'].'</h5>
           <h6 class="card-title">'.$row['product_name'].'</h6>
-           <p class="card-text">'.$row['product_description'].'</p>
            <span class="card-text">£'.$row['product_price'].'</span>
 
            <form action="includes/cartSession.php" method="post">
